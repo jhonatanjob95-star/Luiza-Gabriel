@@ -1,75 +1,743 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#087f83">
+<meta name="description" content="Luiza Gabriel Calçados - Havaianas e chinelos com clima de praia o ano inteiro.">
 <title>Luiza Gabriel Calçados | Praia & Verão</title>
 <style>
-:root{--teal:#087f83;--deep:#07585e;--yellow:#f5d83f;--cream:#fffaf0;--ink:#173638}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif}
-.top{background:var(--deep);color:white;text-align:center;padding:9px;font-size:12px;letter-spacing:2px}
-header{position:sticky;top:0;background:#fffaf0ee;backdrop-filter:blur(12px);z-index:5;border-bottom:1px solid #dce9e2}
-nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:15px}
-.brand{font: bold 22px Georgia,serif;color:var(--deep)}.brand small{display:block;font: bold 9px Arial;letter-spacing:3px;color:var(--teal);margin-top:4px}
-nav a{color:var(--deep);text-decoration:none;font-weight:bold;font-size:13px;margin-left:18px}
-.hero{max-width:1100px;margin:auto;padding:45px 20px 55px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
-.kicker{color:var(--teal);font-weight:bold;letter-spacing:3px;font-size:11px;text-transform:uppercase}
-h1{font: bold clamp(44px,7vw,76px)/.98 Georgia,serif;color:var(--deep);margin:18px 0}
-h1 em{color:#c39d00}.intro{color:#587273;line-height:1.8;max-width:470px}
-.btn{display:inline-block;background:var(--teal);color:white;text-decoration:none;padding:14px 22px;border-radius:30px;font-weight:bold;font-size:13px;margin:14px 8px 0 0}
-.btn.alt{background:transparent;color:var(--deep);border:1px solid #bdd5cc}
-.scene{height:410px;border-radius:30px;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 20%,#ffe77c 0 13%,transparent 13.5%),linear-gradient(145deg,#b9e7d9,#e8e8ae 60%,#f6d76a);display:grid;place-items:center}
-.sea{position:absolute;bottom:-45px;left:-10%;width:120%;height:42%;background:#138e91;border-radius:50% 50% 0 0;transform:rotate(-5deg)}
-.flip{position:absolute;z-index:2;width:145px;height:265px;border-radius:48% 48% 45% 45%;background:#087f83;border:5px solid #fff4c5;transform:rotate(22deg);box-shadow:15px 25px 25px #064f4d55}
-.flip:before{content:"";position:absolute;top:15%;left:50%;height:34%;border-left:8px solid var(--yellow);transform:translateX(-50%)}
-.flip:after{content:"";position:absolute;top:44%;left:22%;width:56%;height:25%;border-top:8px solid var(--yellow);border-radius:50%}
-.flip.two{width:130px;height:235px;background:#fff5df;border-color:#c59c36;transform:translate(-85px,-20px) rotate(-18deg);opacity:.95}
-.stamp{position:absolute;z-index:3;bottom:20px;right:20px;background:#fffaf0;padding:13px 16px;border-radius:15px;color:var(--deep);font:bold 14px Georgia}
-.strip{background:white;padding:18px;text-align:center;color:var(--deep);font-size:12px;font-weight:bold;letter-spacing:.5px}
-section{max-width:1100px;margin:auto;padding:65px 20px}.heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
-h2{font: bold 39px Georgia,serif;color:var(--deep);margin:10px 0}.sub{color:#668080;font-size:13px;line-height:1.6}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.filters button{border:1px solid #c9ded5;background:transparent;color:var(--deep);border-radius:25px;padding:9px 15px;font-weight:bold;cursor:pointer}.filters button.active{background:var(--teal);color:white}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:white;border:1px solid #e5eee7;border-radius:20px;overflow:hidden}.photo{height:190px;display:grid;place-items:center;background:linear-gradient(145deg,#e0f0e2,#c3e5dc);position:relative}.card:nth-child(2) .photo{background:linear-gradient(145deg,#fff0bd,#f8dfa0)}.card:nth-child(3) .photo{background:linear-gradient(145deg,#d7eef1,#a9dcd7)}.card:nth-child(4) .photo{background:linear-gradient(145deg,#f9d9d4,#f6b7a9)}
-.toe{width:90px;height:150px;border-radius:48%;background:#087f83;border:4px solid white;transform:rotate(18deg);position:relative;box-shadow:8px 12px 15px #254b4533}.toe:before{content:"";position:absolute;left:50%;top:10%;height:42%;border-left:7px solid var(--yellow)}.toe:after{content:"";position:absolute;left:20%;top:45%;width:60%;border-top:7px solid var(--yellow);border-radius:50%}.card:nth-child(2) .toe{background:#f1d7b5}.card:nth-child(3) .toe{background:#f4d84b}.card:nth-child(4) .toe{background:#ee8f88}
-.tag{position:absolute;top:12px;left:12px;background:#fff9df;color:var(--deep);font-size:9px;font-weight:bold;padding:7px 10px;border-radius:20px;text-transform:uppercase}
-.info{padding:15px}.info h3{font: bold 19px Georgia;color:var(--deep);margin:0 0 7px}.info p{font-size:12px;color:#728482;line-height:1.5;min-height:36px}.bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}.price{font-size:11px;font-weight:bold;color:#a18100}.add{border:0;background:var(--teal);color:white;border-radius:50%;width:35px;height:35px;font-size:20px;cursor:pointer}
-.banner{background:var(--deep);color:white;border-radius:25px;padding:35px;margin-top:55px}.banner h2{color:white;margin-top:0}.banner p{color:#c5e5dc;line-height:1.7}.banner .btn{background:var(--yellow);color:var(--deep)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.palm{background:#e1f0e4;border-radius:25px;min-height:240px;display:grid;place-items:center;font-size:110px}
-footer{background:#063f45;color:white;padding:32px 20px;text-align:center}footer small{display:block;color:#b1d4c9;margin-top:8px}
-.cart{position:fixed;right:15px;bottom:15px;background:var(--yellow);color:var(--deep);border:0;border-radius:30px;padding:14px 18px;font-weight:bold;box-shadow:0 8px 25px #003d3d33;cursor:pointer}
-.toast{position:fixed;bottom:75px;left:50%;transform:translateX(-50%);background:var(--deep);color:white;padding:12px 18px;border-radius:25px;font-size:12px;display:none}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:30px}.scene{height:310px}.grid{grid-template-columns:repeat(2,1fr)}.heading{display:block}.about{grid-template-columns:1fr}nav a{margin-left:8px;font-size:11px}}
-@media(max-width:430px){.brand{font-size:18px}nav a{font-size:10px}.photo{height:155px}.toe{height:125px;width:75px}.info{padding:12px}h2{font-size:32px}}
+:root{
+  --teal:#087f83;
+  --deep:#07585e;
+  --yellow:#f5d83f;
+  --cream:#fffaf0;
+  --ink:#173638;
+  --soft:#e8f4f1;
+  --shadow:0 12px 30px rgba(7,88,94,.12);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  line-height:1.5;
+}
+
+/* Top bar */
+.top{
+  background:linear-gradient(90deg,var(--deep),#0a6e74);
+  color:white;
+  text-align:center;
+  padding:10px 16px;
+  font-size:12px;
+  letter-spacing:2.5px;
+  font-weight:600;
+}
+
+/* Header */
+header{
+  position:sticky;
+  top:0;
+  background:rgba(255,250,240,.92);
+  backdrop-filter:blur(14px);
+  z-index:20;
+  border-bottom:1px solid #dce9e2;
+  transition:box-shadow .3s ease;
+}
+nav{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+.brand{
+  font:700 22px Georgia,serif;
+  color:var(--deep);
+  text-decoration:none;
+}
+.brand small{
+  display:block;
+  font:700 9px system-ui,sans-serif;
+  letter-spacing:3px;
+  color:var(--teal);
+  margin-top:3px;
+}
+nav a{
+  color:var(--deep);
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
+  margin-left:20px;
+  transition:color .2s;
+}
+nav a:hover{color:var(--teal)}
+
+/* Hero */
+.hero{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px 60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+}
+.kicker{
+  color:var(--teal);
+  font-weight:700;
+  letter-spacing:3px;
+  font-size:11px;
+  text-transform:uppercase;
+}
+h1{
+  font:700 clamp(42px,7vw,72px)/.98 Georgia,serif;
+  color:var(--deep);
+  margin:16px 0 18px;
+}
+h1 em{color:#c39d00;font-style:normal}
+.intro{
+  color:#587273;
+  line-height:1.75;
+  max-width:460px;
+  font-size:15px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:var(--teal);
+  color:white;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:13px;
+  margin:16px 10px 0 0;
+  transition:transform .2s,box-shadow .2s,background .2s;
+  border:none;
+  cursor:pointer;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(8,127,131,.3);
+  background:#0a9196;
+}
+.btn.alt{
+  background:transparent;
+  color:var(--deep);
+  border:1.5px solid #bdd5cc;
+}
+.btn.alt:hover{
+  background:#f0f8f5;
+  box-shadow:none;
+}
+
+/* Scene illustration */
+.scene{
+  height:420px;
+  border-radius:32px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 18%,#ffe77c 0 14%,transparent 14.5%),
+    linear-gradient(150deg,#b9e7d9 0%,#e8e8ae 55%,#f6d76a 100%);
+  display:grid;
+  place-items:center;
+  box-shadow:var(--shadow);
+}
+.sea{
+  position:absolute;
+  bottom:-50px;
+  left:-10%;
+  width:120%;
+  height:44%;
+  background:linear-gradient(180deg,#1aa3a6,#0f7a7d);
+  border-radius:50% 50% 0 0;
+  transform:rotate(-5deg);
+}
+.flip{
+  position:absolute;
+  z-index:2;
+  width:145px;
+  height:265px;
+  border-radius:48% 48% 45% 45%;
+  background:#087f83;
+  border:5px solid #fff4c5;
+  transform:rotate(22deg);
+  box-shadow:15px 25px 30px rgba(6,79,77,.25);
+  transition:transform .4s ease;
+}
+.flip:before{
+  content:"";
+  position:absolute;
+  top:15%;
+  left:50%;
+  height:34%;
+  border-left:8px solid var(--yellow);
+  transform:translateX(-50%);
+}
+.flip:after{
+  content:"";
+  position:absolute;
+  top:44%;
+  left:22%;
+  width:56%;
+  height:25%;
+  border-top:8px solid var(--yellow);
+  border-radius:50%;
+}
+.flip.two{
+  width:130px;
+  height:235px;
+  background:#fff5df;
+  border-color:#c59c36;
+  transform:translate(-85px,-20px) rotate(-18deg);
+  opacity:.97;
+}
+.scene:hover .flip{transform:rotate(18deg) translateY(-6px)}
+.scene:hover .flip.two{transform:translate(-85px,-28px) rotate(-14deg)}
+.stamp{
+  position:absolute;
+  z-index:3;
+  bottom:22px;
+  right:22px;
+  background:#fffaf0;
+  padding:13px 16px;
+  border-radius:16px;
+  color:var(--deep);
+  font:700 14px Georgia,serif;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+/* Strip */
+.strip{
+  background:white;
+  padding:18px;
+  text-align:center;
+  color:var(--deep);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.6px;
+  border-top:1px solid #eef5f1;
+  border-bottom:1px solid #eef5f1;
+}
+
+/* Sections */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
+}
+.heading{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:28px;
+}
+h2{
+  font:700 38px Georgia,serif;
+  color:var(--deep);
+  margin:8px 0;
+}
+.sub{
+  color:#668080;
+  font-size:13.5px;
+  line-height:1.6;
+}
+
+/* Filters */
+.filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:22px 0 28px;
+}
+.filters button{
+  border:1.5px solid #c9ded5;
+  background:transparent;
+  color:var(--deep);
+  border-radius:25px;
+  padding:9px 16px;
+  font-weight:700;
+  font-size:13px;
+  cursor:pointer;
+  transition:all .2s;
+}
+.filters button:hover{
+  border-color:var(--teal);
+  background:#f0faf8;
+}
+.filters button.active{
+  background:var(--teal);
+  color:white;
+  border-color:var(--teal);
+}
+
+/* Product grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.card{
+  background:white;
+  border:1px solid #e5eee7;
+  border-radius:22px;
+  overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+.photo{
+  height:195px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#e0f0e2,#c3e5dc);
+  position:relative;
+}
+.card:nth-child(2) .photo{background:linear-gradient(145deg,#fff0bd,#f8dfa0)}
+.card:nth-child(3) .photo{background:linear-gradient(145deg,#d7eef1,#a9dcd7)}
+.card:nth-child(4) .photo{background:linear-gradient(145deg,#f9d9d4,#f6b7a9)}
+
+.toe{
+  width:90px;
+  height:150px;
+  border-radius:48%;
+  background:#087f83;
+  border:4px solid white;
+  transform:rotate(18deg);
+  position:relative;
+  box-shadow:8px 12px 18px rgba(37,75,69,.2);
+  transition:transform .3s;
+}
+.card:hover .toe{transform:rotate(12deg) scale(1.04)}
+.toe:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:10%;
+  height:42%;
+  border-left:7px solid var(--yellow);
+}
+.toe:after{
+  content:"";
+  position:absolute;
+  left:20%;
+  top:45%;
+  width:60%;
+  border-top:7px solid var(--yellow);
+  border-radius:50%;
+}
+.card:nth-child(2) .toe{background:#f1d7b5}
+.card:nth-child(3) .toe{background:#f4d84b}
+.card:nth-child(4) .toe{background:#ee8f88}
+
+.tag{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#fff9df;
+  color:var(--deep);
+  font-size:9px;
+  font-weight:700;
+  padding:7px 11px;
+  border-radius:20px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
+.info{padding:16px}
+.info h3{
+  font:700 18px Georgia,serif;
+  color:var(--deep);
+  margin:0 0 6px;
+}
+.info p{
+  font-size:12.5px;
+  color:#728482;
+  line-height:1.5;
+  min-height:38px;
+  margin:0 0 12px;
+}
+.bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
+.price{
+  font-size:12px;
+  font-weight:700;
+  color:#a18100;
+}
+.add{
+  border:0;
+  background:var(--teal);
+  color:white;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  font-size:20px;
+  cursor:pointer;
+  transition:transform .2s,background .2s;
+  display:grid;
+  place-items:center;
+}
+.add:hover{
+  transform:scale(1.1);
+  background:#0a9196;
+}
+
+/* Banner */
+.banner{
+  background:linear-gradient(135deg,var(--deep),#0a6e74);
+  color:white;
+  border-radius:28px;
+  padding:40px;
+  margin-top:55px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  box-shadow:var(--shadow);
+}
+.banner h2{
+  color:white;
+  margin:0 0 10px;
+  font-size:28px;
+}
+.banner p{
+  color:#c5e5dc;
+  line-height:1.7;
+  margin:0;
+  max-width:420px;
+}
+.banner .btn{
+  background:var(--yellow);
+  color:var(--deep);
+  margin:0;
+}
+.banner .btn:hover{
+  background:#ffe566;
+  box-shadow:0 8px 20px rgba(245,216,63,.35);
+}
+
+/* About */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.palm{
+  background:linear-gradient(145deg,#e1f0e4,#c8e6d4);
+  border-radius:28px;
+  min-height:260px;
+  display:grid;
+  place-items:center;
+  font-size:110px;
+  box-shadow:var(--shadow);
+}
+
+/* Footer */
+footer{
+  background:#063f45;
+  color:white;
+  padding:40px 20px;
+  text-align:center;
+}
+footer strong{
+  font-size:17px;
+  letter-spacing:.5px;
+}
+footer small{
+  display:block;
+  color:#b1d4c9;
+  margin-top:10px;
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* Cart button */
+.cart{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:var(--yellow);
+  color:var(--deep);
+  border:0;
+  border-radius:30px;
+  padding:14px 20px;
+  font-weight:700;
+  font-size:14px;
+  box-shadow:0 8px 25px rgba(0,61,61,.2);
+  cursor:pointer;
+  z-index:30;
+  transition:transform .2s,box-shadow .2s;
+}
+.cart:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(0,61,61,.28);
+}
+
+/* WhatsApp floating button */
+.whatsapp{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  box-shadow:0 8px 22px rgba(37,211,102,.4);
+  z-index:30;
+  transition:transform .2s,box-shadow .2s;
+  text-decoration:none;
+}
+.whatsapp:hover{
+  transform:scale(1.08);
+  box-shadow:0 12px 28px rgba(37,211,102,.5);
+}
+.whatsapp svg{
+  width:30px;
+  height:30px;
+  fill:white;
+}
+
+/* Toast */
+.toast{
+  position:fixed;
+  bottom:90px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--deep);
+  color:white;
+  padding:13px 20px;
+  border-radius:25px;
+  font-size:13px;
+  font-weight:600;
+  display:none;
+  z-index:40;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:35px;gap:30px}
+  .scene{height:320px}
+  .heading{display:block}
+  .about{grid-template-columns:1fr}
+  .banner{padding:32px 24px}
+  nav a{margin-left:12px;font-size:12px}
+}
+@media(max-width:430px){
+  .brand{font-size:18px}
+  nav a{font-size:11px;margin-left:8px}
+  .photo{height:160px}
+  .toe{height:128px;width:76px}
+  .info{padding:13px}
+  h2{font-size:30px}
+  .banner h2{font-size:24px}
+  .cart{padding:12px 16px;font-size:13px}
+  .whatsapp{width:52px;height:52px;left:14px;bottom:14px}
+  .whatsapp svg{width:26px;height:26px}
+}
 </style>
 </head>
 <body>
 <div class="top">☀ UM TOQUE DE VERÃO EM CADA PASSO ☀</div>
-<header><nav><a class="brand" href="#inicio">Luiza Gabriel<small>CALÇADOS • PRAIA & VERÃO</small></a><div><a href="#colecao">Coleção</a><a href="#sobre">Nossa vibe</a></div></nav></header>
+
+<header>
+  <nav>
+    <a class="brand" href="#inicio">Luiza Gabriel<small>CALÇADOS • PRAIA & VERÃO</small></a>
+    <div>
+      <a href="#colecao">Coleção</a>
+      <a href="#sobre">Nossa vibe</a>
+    </div>
+  </nav>
+</header>
+
 <main>
-<section class="hero" id="inicio">
-<div><div class="kicker">Pés livres, alma leve</div><h1>O verão começa <em>nos pés.</em></h1><p class="intro">Seu clima de praia o ano inteiro. Descubra Havaianas e chinelos para acompanhar cada mergulho, passeio e pôr do sol.</p><a class="btn" href="#colecao">Explorar coleção ↗</a><a class="btn alt" href="#sobre">Conheça a loja</a></div>
-<div class="scene" aria-label="Ilustração de chinelos em cenário tropical"><div class="sea"></div><div class="flip two"></div><div class="flip"></div><div class="stamp">Leveza para viver o verão</div></div>
-</section>
-<div class="strip">🌴 CLIMA TROPICAL &nbsp; • &nbsp; CONFORTO PARA O DIA A DIA &nbsp; • &nbsp; ESTILO PRAIANO</div>
-<section id="colecao">
-<div class="heading"><div><div class="kicker">Escolha seu próximo par</div><h2>Um verão de possibilidades</h2></div><p class="sub">Toque no + para adicionar um modelo à sua sacola.</p></div>
-<div class="filters"><button class="active" data-filter="todos">Todos</button><button data-filter="classicos">Clássicos</button><button data-filter="estampados">Estampados</button><button data-filter="femininos">Femininos</button><button data-filter="infantis">Infantis</button></div>
-<div class="grid">
-<article class="card" data-cat="classicos"><div class="photo"><span class="tag">Essencial</span><div class="toe"></div></div><div class="info"><h3>Clássica Praia</h3><p>Visual atemporal para acompanhar todos os dias.</p><div class="bottom"><span class="price">Consulte disponibilidade</span><button class="add" data-name="Clássica Praia">+</button></div></div></article>
-<article class="card" data-cat="femininos"><div class="photo"><span class="tag">Delicada</span><div class="toe"></div></div><div class="info"><h3>Slim Dourada</h3><p>Um toque delicado para dias ensolarados.</p><div class="bottom"><span class="price">Consulte disponibilidade</span><button class="add" data-name="Slim Dourada">+</button></div></div></article>
-<article class="card" data-cat="estampados"><div class="photo"><span class="tag">Tropical</span><div class="toe"></div></div><div class="info"><h3>Estampa Verão</h3><p>Cores alegres inspiradas nos dias de praia.</p><div class="bottom"><span class="price">Consulte disponibilidade</span><button class="add" data-name="Estampa Verão">+</button></div></div></article>
-<article class="card" data-cat="infantis"><div class="photo"><span class="tag">Pequenos passos</span><div class="toe"></div></div><div class="info"><h3>Mini Verão</h3><p>Um modelo alegre para a criançada.</p><div class="bottom"><span class="price">Consulte disponibilidade</span><button class="add" data-name="Mini Verão">+</button></div></div></article>
-</div><p class="sub">* Modelos ilustrativos. Fotos reais, numerações, preços e estoque serão cadastrados antes da abertura da loja.</p>
-<div class="banner"><h2>Seu próximo destino começa com um passo.</h2><p>Escolha seu par favorito e prepare-se para curtir o sol, a praia e os bons momentos.</p><a class="btn" href="#colecao">Ver coleção ↗</a></div>
-</section>
-<section class="about" id="sobre"><div class="palm">🌴</div><div><div class="kicker">Nossa vibe</div><h2>Leveza, cor e liberdade.</h2><p class="intro">A Luiza Gabriel Calçados quer levar um pedacinho do verão para a rotina. Uma seleção de Havaianas e chinelos para quem gosta de conforto, praia e personalidade.</p></div></section>
+  <section class="hero" id="inicio">
+    <div>
+      <div class="kicker">Pés livres, alma leve</div>
+      <h1>O verão começa <em>nos pés.</em></h1>
+      <p class="intro">Seu clima de praia o ano inteiro. Descubra Havaianas e chinelos para acompanhar cada mergulho, passeio e pôr do sol.</p>
+      <a class="btn" href="#colecao">Explorar coleção ↗</a>
+      <a class="btn alt" href="https://wa.me/5511960687917?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20chinelos." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <div class="scene" aria-label="Ilustração de chinelos em cenário tropical">
+      <div class="sea"></div>
+      <div class="flip two"></div>
+      <div class="flip"></div>
+      <div class="stamp">Leveza para viver o verão</div>
+    </div>
+  </section>
+
+  <div class="strip">🌴 CLIMA TROPICAL &nbsp; • &nbsp; CONFORTO PARA O DIA A DIA &nbsp; • &nbsp; ESTILO PRAIANO</div>
+
+  <section id="colecao">
+    <div class="heading">
+      <div>
+        <div class="kicker">Escolha seu próximo par</div>
+        <h2>Um verão de possibilidades</h2>
+      </div>
+      <p class="sub">Toque no + para adicionar um modelo à sua sacola.</p>
+    </div>
+
+    <div class="filters">
+      <button class="active" data-filter="todos">Todos</button>
+      <button data-filter="classicos">Clássicos</button>
+      <button data-filter="estampados">Estampados</button>
+      <button data-filter="femininos">Femininos</button>
+      <button data-filter="infantis">Infantis</button>
+    </div>
+
+    <div class="grid">
+      <article class="card" data-cat="classicos">
+        <div class="photo">
+          <span class="tag">Essencial</span>
+          <div class="toe"></div>
+        </div>
+        <div class="info">
+          <h3>Clássica Praia</h3>
+          <p>Visual atemporal para acompanhar todos os dias.</p>
+          <div class="bottom">
+            <span class="price">Consulte disponibilidade</span>
+            <button class="add" data-name="Clássica Praia">+</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="femininos">
+        <div class="photo">
+          <span class="tag">Delicada</span>
+          <div class="toe"></div>
+        </div>
+        <div class="info">
+          <h3>Slim Dourada</h3>
+          <p>Um toque delicado para dias ensolarados.</p>
+          <div class="bottom">
+            <span class="price">Consulte disponibilidade</span>
+            <button class="add" data-name="Slim Dourada">+</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="estampados">
+        <div class="photo">
+          <span class="tag">Tropical</span>
+          <div class="toe"></div>
+        </div>
+        <div class="info">
+          <h3>Estampa Verão</h3>
+          <p>Cores alegres inspiradas nos dias de praia.</p>
+          <div class="bottom">
+            <span class="price">Consulte disponibilidade</span>
+            <button class="add" data-name="Estampa Verão">+</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="infantis">
+        <div class="photo">
+          <span class="tag">Pequenos passos</span>
+          <div class="toe"></div>
+        </div>
+        <div class="info">
+          <h3>Mini Verão</h3>
+          <p>Um modelo alegre para a criançada.</p>
+          <div class="bottom">
+            <span class="price">Consulte disponibilidade</span>
+            <button class="add" data-name="Mini Verão">+</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="sub" style="margin-top:20px">* Modelos ilustrativos. Fotos reais, numerações, preços e estoque serão cadastrados antes da abertura da loja.</p>
+
+    <div class="banner">
+      <div>
+        <h2>Seu próximo destino começa com um passo.</h2>
+        <p>Escolha seu par favorito e prepare-se para curtir o sol, a praia e os bons momentos. Fale conosco agora pelo WhatsApp!</p>
+      </div>
+      <a class="btn" href="https://wa.me/5511960687917?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20produtos." target="_blank" rel="noopener">Chamar no WhatsApp ↗</a>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="palm">🌴</div>
+    <div>
+      <div class="kicker">Nossa vibe</div>
+      <h2>Leveza, cor e liberdade.</h2>
+      <p class="intro">A Luiza Gabriel Calçados quer levar um pedacinho do verão para a rotina. Uma seleção de Havaianas e chinelos para quem gosta de conforto, praia e personalidade.</p>
+      <a class="btn" href="https://wa.me/5511960687917?text=Olá!%20Gostaria%20de%20conhecer%20mais%20a%20Luiza%20Gabriel%20Calçados." target="_blank" rel="noopener" style="margin-top:20px">Falar com a loja</a>
+    </div>
+  </section>
 </main>
-<footer><strong>Luiza Gabriel Calçados ☼</strong><small>Praia • Verão • Leveza<br>© 2026 Luiza Gabriel Calçados</small></footer>
-<button class="cart" id="cart">Sacola (<span id="count">0</span>)</button><div class="toast" id="toast"></div>
+
+<footer>
+  <strong>Luiza Gabriel Calçados ☼</strong>
+  <small>Praia • Verão • Leveza<br>© 2026 Luiza Gabriel Calçados</small>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a class="whatsapp" href="https://wa.me/5511960687917?text=Olá!%20Vim%20pelo%20site%20da%20Luiza%20Gabriel%20Calçados." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<button class="cart" id="cart">Sacola (<span id="count">0</span>)</button>
+<div class="toast" id="toast"></div>
+
 <script>
-const bag=[];const count=document.getElementById('count'),toast=document.getElementById('toast');
-document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{bag.push(b.dataset.name);count.textContent=bag.length;toast.textContent=b.dataset.name+' adicionado!';toast.style.display='block';setTimeout(()=>toast.style.display='none',1800)}));
-document.getElementById('cart').addEventListener('click',()=>alert(bag.length?'Sua sacola: '+bag.join(', ')+'\\n\\nEsta é uma prévia. O checkout e o Pix serão configurados na próxima etapa.':'Sua sacola está vazia. Escolha um modelo!'));
-document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.card').forEach(c=>c.hidden=b.dataset.filter!=='todos'&&c.dataset.cat!==b.dataset.filter)}));
+const bag = [];
+const count = document.getElementById('count');
+const toast = document.getElementById('toast');
+
+document.querySelectorAll('.add').forEach(b => {
+  b.addEventListener('click', () => {
+    bag.push(b.dataset.name);
+    count.textContent = bag.length;
+    toast.textContent = b.dataset.name + ' adicionado!';
+    toast.style.display = 'block';
+    setTimeout(() => toast.style.display = 'none', 1800);
+  });
+});
+
+document.getElementById('cart').addEventListener('click', () => {
+  if (bag.length) {
+    const msg = 'Olá! Gostaria de saber mais sobre estes modelos: ' + bag.join(', ');
+    window.open('https://wa.me/5511960687917?text=' + encodeURIComponent(msg), '_blank');
+  } else {
+    alert('Sua sacola está vazia. Escolha um modelo!');
+  }
+});
+
+document.querySelectorAll('.filters button').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.querySelectorAll('.card').forEach(c => {
+      c.hidden = b.dataset.filter !== 'todos' && c.dataset.cat !== b.dataset.filter;
+    });
+  });
+});
 </script>
-</body></html>
+</body>
+</html>
